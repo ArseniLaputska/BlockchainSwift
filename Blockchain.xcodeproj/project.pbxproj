@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,9 @@
 		36403FA92716077900FED773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36403FA72716077900FED773 /* Main.storyboard */; };
 		36403FAB2716077A00FED773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36403FAA2716077A00FED773 /* Assets.xcassets */; };
 		36403FAE2716077A00FED773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36403FAC2716077A00FED773 /* LaunchScreen.storyboard */; };
-		C94F93A47B204E896675CA7F /* Pods_Blockchain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3661F27EECF3E86FD9531881 /* Pods_Blockchain.framework */; };
+		3678662527161AEA0043B0BA /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3678662427161AEA0043B0BA /* Chain.swift */; };
+		367866272716245D0043B0BA /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367866262716245D0043B0BA /* Blockchain.swift */; };
+		36A66B65271776BD00BA118E /* KituraNet in Frameworks */ = {isa = PBXBuildFile; productRef = 36A66B64271776BD00BA118E /* KituraNet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +27,8 @@
 		36403FAA2716077A00FED773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36403FAD2716077A00FED773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36403FAF2716077A00FED773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3661F27EECF3E86FD9531881 /* Pods_Blockchain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blockchain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39204AC14D1B5BD2DEA7E67A /* Pods-Blockchain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blockchain.release.xcconfig"; path = "Target Support Files/Pods-Blockchain/Pods-Blockchain.release.xcconfig"; sourceTree = "<group>"; };
-		F79406E16A3EF8B777D7CC77 /* Pods-Blockchain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blockchain.debug.xcconfig"; path = "Target Support Files/Pods-Blockchain/Pods-Blockchain.debug.xcconfig"; sourceTree = "<group>"; };
+		3678662427161AEA0043B0BA /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
+		367866262716245D0043B0BA /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94F93A47B204E896675CA7F /* Pods_Blockchain.framework in Frameworks */,
+				36A66B65271776BD00BA118E /* KituraNet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,19 +46,8 @@
 		07F9CA5098F5535B21358C91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F79406E16A3EF8B777D7CC77 /* Pods-Blockchain.debug.xcconfig */,
-				39204AC14D1B5BD2DEA7E67A /* Pods-Blockchain.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		10966B45AC3AF1034473ED7E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3661F27EECF3E86FD9531881 /* Pods_Blockchain.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		36403F952716077900FED773 = {
@@ -66,7 +56,6 @@
 				36403FA02716077900FED773 /* Blockchain */,
 				36403F9F2716077900FED773 /* Products */,
 				07F9CA5098F5535B21358C91 /* Pods */,
-				10966B45AC3AF1034473ED7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +77,8 @@
 				36403FAA2716077A00FED773 /* Assets.xcassets */,
 				36403FAC2716077A00FED773 /* LaunchScreen.storyboard */,
 				36403FAF2716077A00FED773 /* Info.plist */,
+				3678662427161AEA0043B0BA /* Chain.swift */,
+				367866262716245D0043B0BA /* Blockchain.swift */,
 			);
 			path = Blockchain;
 			sourceTree = "<group>";
@@ -99,17 +90,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36403FB22716077A00FED773 /* Build configuration list for PBXNativeTarget "Blockchain" */;
 			buildPhases = (
-				3FCF1C4DA670F6F45411C03F /* [CP] Check Pods Manifest.lock */,
 				36403F9A2716077900FED773 /* Sources */,
 				36403F9B2716077900FED773 /* Frameworks */,
 				36403F9C2716077900FED773 /* Resources */,
-				AE5AAAC907A5D5A5DEB696A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Blockchain;
+			packageProductDependencies = (
+				36A66B64271776BD00BA118E /* KituraNet */,
+			);
 			productName = Blockchain;
 			productReference = 36403F9E2716077900FED773 /* Blockchain.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 36403F952716077900FED773;
+			packageReferences = (
+				36A66B63271776BD00BA118E /* XCRemoteSwiftPackageReference "Kitura-net" */,
+			);
 			productRefGroup = 36403F9F2716077900FED773 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,48 +154,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3FCF1C4DA670F6F45411C03F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Blockchain-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE5AAAC907A5D5A5DEB696A0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Blockchain/Pods-Blockchain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Blockchain/Pods-Blockchain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Blockchain/Pods-Blockchain-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		36403F9A2716077900FED773 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -209,6 +162,8 @@
 				36403FA62716077900FED773 /* ViewController.swift in Sources */,
 				36403FA22716077900FED773 /* AppDelegate.swift in Sources */,
 				36403FA42716077900FED773 /* SceneDelegate.swift in Sources */,
+				367866272716245D0043B0BA /* Blockchain.swift in Sources */,
+				3678662527161AEA0043B0BA /* Chain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +307,6 @@
 		};
 		36403FB32716077A00FED773 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F79406E16A3EF8B777D7CC77 /* Pods-Blockchain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -371,7 +325,6 @@
 		};
 		36403FB42716077A00FED773 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39204AC14D1B5BD2DEA7E67A /* Pods-Blockchain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -410,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36A66B63271776BD00BA118E /* XCRemoteSwiftPackageReference "Kitura-net" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/Kitura-net";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36A66B64271776BD00BA118E /* KituraNet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36A66B63271776BD00BA118E /* XCRemoteSwiftPackageReference "Kitura-net" */;
+			productName = KituraNet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36403F962716077900FED773 /* Project object */;
 }

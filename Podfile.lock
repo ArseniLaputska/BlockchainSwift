@@ -18,6 +18,7 @@ DEPENDENCIES:
   - CryptoSwift
   - KituraContracts
   - KituraKit
+  - LoggerAPI
   - SwiftyRequest
 
 SPEC REPOS:
@@ -39,6 +40,6 @@ SPEC CHECKSUMS:
   Logging: beeb016c9c80cf77042d62e83495816847ef108b
   SwiftyRequest: 8e84cd4839fe2429285fe60a5812b5634a8ecb83
 
-PODFILE CHECKSUM: de7dad2371d7ad779e32aed27116289cf9febf68
+PODFILE CHECKSUM: ca90f57769cb2eb8b12ea2072109cb60ddd6045c
 
 COCOAPODS: 1.10.1
